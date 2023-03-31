@@ -21,6 +21,11 @@ func main() {
 	fmt.Println(e)
 	f := d + e
 	fmt.Println(f)
+	s,t := swap("hello","world")
+	fmt.Println(s,t)
+	p,q := split(100)
+	fmt.Println("1st Number : ",p)
+	fmt.Println("2nd number : ",q)
 }
 
 func GenrateRandInt(r int) int {
@@ -32,4 +37,13 @@ func GenerateRandFloat() float64 {
 	randFloat := rand.Float64()
 
 	return randFloat
+}
+
+func swap (x,y string) (string , string) {
+	return y,x
+}
+func split(sum int) (x, y int) {
+	x = sum *4 /9
+	y = sum - x
+	return
 }
